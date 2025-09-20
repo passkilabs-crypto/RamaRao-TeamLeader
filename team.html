@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My LIC Team - D. Rama Rao</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    #nav-menu {
+      transition: transform 0.3s ease-in-out;
+    }
+    
+    /* Mobile menu styles */
+    @media (max-width: 767px) {
+      #nav-menu.hidden {
+        transform: translateY(-100%);
+      }
+      #nav-menu:not(.hidden) {
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body class="font-sans text-gray-800 bg-white min-h-screen">
+  <!-- Navigation -->
+  <nav class="fixed top-0 left-0 w-full bg-gradient-to-r from-blue-700 to-blue-500 text-white shadow-lg z-50">
+    <div class="container mx-auto px-4 flex justify-between items-center py-4">
+      <div class="text-2xl font-serif font-bold uppercase">D. Rama Rao</div>
+      <button id="menu-toggle" class="md:hidden text-2xl">☰</button>
+      
+      <!-- Fixed Navigation Menu -->
+      <ul id="nav-menu" 
+          class="hidden md:flex flex-col md:flex-row md:space-x-6 
+                 absolute md:relative left-0 top-full md:top-auto w-full md:w-auto 
+                 bg-blue-700 md:bg-transparent shadow-lg md:shadow-none 
+                 px-6 md:px-0 py-4 md:py-0">
+        <li><a href="index.html" class="block py-2 text-lg font-semibold hover:text-gray-200">Home</a></li>
+        <li><a href="team.html" class="block py-2 text-lg font-semibold hover:text-gray-200">Team</a></li>
+        <li><a href="testimonials.html" class="block py-2 text-lg font-semibold hover:text-gray-200">Testimonials & FAQ</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Team Header -->
+  <section class="bg-gradient-to-r from-blue-700 to-blue-500 text-white py-20 pt-28 text-center">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="text-4xl sm:text-5xl font-serif font-bold uppercase mb-4">My LIC Team</h1>
+      <p class="text-lg sm:text-xl opacity-90">34 Dedicated Agents Building Successful Careers</p>
+    </div>
+  </section>
+
+  <!-- Team Content -->
+  <section class="py-16 sm:py-20">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+        <h3 class="bg-blue-500 text-white text-center text-xl sm:text-2xl font-semibold py-4">Team Members Directory</h3>
+        <div class="overflow-x-auto">
+          <table class="w-full min-w-[600px] border-collapse">
+            <thead>
+              <tr class="bg-gray-100 text-blue-700">
+                <th class="py-4 px-6 text-left font-bold">Name</th>
+                <th class="py-4 px-6 text-left font-bold">Location</th>
+                <th class="py-4 px-6 text-left font-bold">ID</th>
+                <th class="py-4 px-6 text-left font-bold">Phone</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-200">
+              <tr class="hover:bg-gray-50">
+                <td class="py-4 px-6">P. Devendra</td>
+                <td class="py-4 px-6">Nalgonda</td>
+                <td class="py-4 px-6">1575654</td>
+                <td class="py-4 px-6">9703728009</td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="py-4 px-6">N. Venkat</td>
+                <td class="py-4 px-6">Vanasthali</td>
+                <td class="py-4 px-6">1988654</td>
+                <td class="py-4 px-6">9440657712</td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="py-4 px-6">D. Narsimha</td>
+                <td class="py-4 px-6">Munugode</td>
+                <td class="py-4 px-6">2675654</td>
+                <td class="py-4 px-6">9440352418</td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="py-4 px-6">Ramesh Naik</td>
+                <td class="py-4 px-6">Huzurnagar</td>
+                <td class="py-4 px-6">2875654</td>
+                <td class="py-4 px-6">9848138791</td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="py-4 px-6">Kodi Ashok</td>
+                <td class="py-4 px-6">Narkekal</td>
+                <td class="py-4 px-6">2862654</td>
+                <td class="py-4 px-6">9440201022</td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="py-4 px-6">M. Sreedhar</td>
+                <td class="py-4 px-6">Vanasthali</td>
+                <td class="py-4 px-6">3324654</td>
+                <td class="py-4 px-6">9849850545</td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="py-4 px-6">Y. Karunakar</td>
+                <td class="py-4 px-6">Narkekal</td>
+                <td class="py-4 px-6">3694654</td>
+                <td class="py-4 px-6">9989178124</td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="py-4 px-6">Ch. Srinivas</td>
+                <td class="py-4 px-6">Narkekal</td>
+                <td class="py-4 px-6">3248654</td>
+                <td class="py-4 px-6">9705206939</td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="py-4 px-6">Ch. Venkat</td>
+                <td class="py-4 px-6">Narkekal</td>
+                <td class="py-4 px-6">4447654</td>
+                <td class="py-4 px-6">9866607006</td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="py-4 px-6">K. Pandiaswamy</td>
+                <td class="py-4 px-6">Anmanachal</td>
+                <td class="py-4 px-6">5232654</td>
+                <td class="py-4 px-6">8328317547</td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="py-4 px-6">T. Lingaiah</td>
+                <td class="py-4 px-6">Nalgonda</td>
+                <td class="py-4 px-6">1745654</td>
+                <td class="py-4 px-6">9440165383</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Join Team Section -->
+  <section class="bg-gray-100 py-16 sm:py-20 text-center">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl sm:text-4xl font-serif font-bold text-blue-700 mb-6">Join My Team</h2>
+      <p class="text-lg sm:text-xl text-gray-600 mb-10 max-w-3xl mx-auto">
+        Looking to build a successful LIC career? I provide complete guidance and mentorship to help you achieve your goals.
+      </p>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:scale-105 transition">
+          <div class="text-4xl mb-4">✅</div>
+          <h3 class="text-xl font-semibold text-blue-700">Personal Training</h3>
+          <p class="text-gray-600">Learn how to bring in high-value insurance business.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:scale-105 transition">
+          <div class="text-4xl mb-4">💻</div>
+          <h3 class="text-xl font-semibold text-blue-700">Digital Support</h3>
+          <p class="text-gray-600">Get tools, presentations & marketing guidance to grow faster.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:scale-105 transition">
+          <div class="text-4xl mb-4">👥</div>
+          <h3 class="text-xl font-semibold text-blue-700">Team Strength</h3>
+          <p class="text-gray-600">Be part of my growing team of 34 motivated agents.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:scale-105 transition">
+          <div class="text-4xl mb-4">🏆</div>
+          <h3 class="text-xl font-semibold text-blue-700">Proven Results</h3>
+          <p class="text-gray-600">Guiding agents to achieve Chairman's Club recognition.</p>
+        </div>
+      </div>
+
+      <p class="text-lg sm:text-xl font-bold text-blue-700">Take the Next Step</p>
+      <p class="mt-2 text-gray-600 max-w-2xl mx-auto">
+        Join my LIC team today and build a rewarding career in life insurance, pension solutions, and financial planning.
+      </p>
+      <p class="mt-4 text-lg sm:text-xl font-semibold text-gray-700">
+        📞 Contact me to start your journey with India's most trusted life insurance brand – LIC.
+      </p>
+    </div>
+  </section>
+
+  <!-- WhatsApp Icon -->
+  <a href="https://wa.me/+917036557621" target="_blank"
+     class="fixed bottom-6 right-6 bg-[#25D366] text-white p-4 rounded-full shadow-lg hover:bg-[#20b858] transition z-50">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.134.298-.347.446-.52.149-.174.297-.298.473-.297.174 0 .348.074.474.198.126.124 1.473.648 1.473.986 0 .338-.231.645-.5.986-.273.346-.506.833-.644 1.131-.138.297.055.648.255.846.197.198.859.986 1.955 1.382 1.405.496 1.755.446 2.077.297.322-.149 1.005-.545 1.147-.842.142-.297.142-.596.099-.745-.045-.149-.198-.297-.496-.446z"/>
+      <path d="M12 0C5.373 0 0 5.373 0 12c0 2.117.548 4.115 1.508 5.853L0 24l6.277-1.595A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818c-1.92 0-3.718-.558-5.245-1.518l-.365-.232-3.723.947.956-3.677-.243-.387C2.43 15.31 2 13.695 2 12c0-5.514 4.486-10 10-10s10 4.486 10 10-4.486 10-10 10z"/>
+    </svg>
+  </a>
+
+<script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const navMenu = document.getElementById('nav-menu');
+  const navLinks = navMenu.querySelectorAll('a');
+
+  // Toggle menu
+  menuToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('hidden');
+    menuToggle.textContent = navMenu.classList.contains('hidden') ? '☰' : '×';
+  });
+
+  // Close menu when a link is clicked (mobile only)
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      if (window.innerWidth < 768) {
+        navMenu.classList.add('hidden');
+        menuToggle.textContent = '☰';
+      }
+    });
+  });
+</script>
+  
+</body>
+</html> 
