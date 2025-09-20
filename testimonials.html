@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Testimonials & FAQ - D. Rama Rao</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    #nav-menu {
+      transition: transform 0.3s ease-in-out;
+    }
+    
+    /* Mobile menu styles */
+    @media (max-width: 767px) {
+      #nav-menu.hidden {
+        transform: translateY(-100%);
+      }
+      #nav-menu:not(.hidden) {
+        transform: translateY(0);
+      }
+    }
+
+    .faq-answer {
+      transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+    .faq-answer.active {
+      max-height: 500px;
+      opacity: 1;
+    }
+  </style>
+</head>
+<body class="font-sans text-gray-800 bg-white min-h-screen">
+  <!-- Navigation -->
+  <nav class="fixed top-0 left-0 w-full bg-gradient-to-r from-blue-700 to-blue-500 text-white shadow-lg z-50">
+    <div class="container mx-auto px-4 flex justify-between items-center py-4">
+      <div class="text-2xl font-serif font-bold uppercase">D. Rama Rao</div>
+      <button id="menu-toggle" class="md:hidden text-2xl">☰</button>
+      
+      <!-- Fixed Navigation Menu -->
+      <ul id="nav-menu" 
+          class="hidden md:flex flex-col md:flex-row md:space-x-6 
+                 absolute md:relative left-0 top-full md:top-auto w-full md:w-auto 
+                 bg-blue-700 md:bg-transparent shadow-lg md:shadow-none 
+                 px-6 md:px-0 py-4 md:py-0">
+        <li><a href="index.html" class="block py-2 text-lg font-semibold hover:text-gray-200">Home</a></li>
+        <li><a href="team.html" class="block py-2 text-lg font-semibold hover:text-gray-200">Team</a></li>
+        <li><a href="testimonials.html" class="block py-2 text-lg font-semibold hover:text-gray-200">Testimonials & FAQ</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+   <section class="bg-gradient-to-r from-blue-700 to-blue-500 text-white py-20 pt-28 text-center">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="text-4xl sm:text-5xl font-serif font-bold uppercase mb-4">Testimonials & FAQ</h1>
+      <p class="text-lg sm:text-xl opacity-90">Client feedback and answers to common questions</p>
+    </div>
+  </section>
+  
+  <!-- Testimonials Section -->
+  <section class="py-16 sm:py-20">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl sm:text-4xl font-serif font-bold text-blue-700 mb-10 text-center">Client Testimonials</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition">
+          <p class="text-gray-600 italic mb-4">"Rama Rao sir guided me step by step in selecting the right LIC policy for my family. His approach is simple and trustworthy."</p>
+          <h3 class="text-blue-700 font-bold">— Suresh Kumar</h3>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition">
+          <p class="text-gray-600 italic mb-4">"Thanks to his mentorship, I am now a successful LIC agent earning stable income. He is more than a guide, he is a motivator."</p>
+          <h3 class="text-blue-700 font-bold">— Lakshmi Devi</h3>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition">
+          <p class="text-gray-600 italic mb-4">"His team spirit and knowledge about LIC schemes are unmatched. I feel proud to be part of his team."</p>
+          <h3 class="text-blue-700 font-bold">— Rajesh Naik</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="bg-gray-100 py-16 sm:py-20">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl sm:text-4xl font-serif font-bold text-blue-700 mb-8 text-center">Frequently Asked Questions</h2>
+      <div class="max-w-3xl mx-auto space-y-4">
+        <div class="faq-item">
+          <div class="faq-question bg-gray-200 p-4 rounded-lg font-bold text-blue-700 cursor-pointer hover:bg-gray-300 transition" onclick="toggleFAQ(this)">What is Life Insurance, and why is it important?</div>
+          <div class="faq-answer p-4 bg-gray-50 border-l-4 border-blue-500 rounded-lg text-gray-600">Life insurance provides financial protection to your family in case of an unfortunate event and helps with future savings goals like retirement or education.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question bg-gray-200 p-4 rounded-lg font-bold text-blue-700 cursor-pointer hover:bg-gray-300 transition" onclick="toggleFAQ(this)">What types of LIC policies do you offer?</div>
+          <div class="faq-answer p-4 bg-gray-50 border-l-4 border-blue-500 rounded-lg text-gray-600">
+            We offer:
+            <ul class="list-disc ml-6">
+              <li>Savings & Risk Coverage Plans</li>
+              <li>Pension & Retirement Plans</li>
+              <li>Child Plans</li>
+              <li>Women-Centric Plans (BIM Sakhi)</li>
+            </ul>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question bg-gray-200 p-4 rounded-lg font-bold text-blue-700 cursor-pointer hover:bg-gray-300 transition" onclick="toggleFAQ(this)">How can I become an LIC agent?</div>
+          <div class="faq-answer p-4 bg-gray-50 border-l-4 border-blue-500 rounded-lg text-gray-600">Minimum graduation is required. Complete LIC training + pass IRDAI exam. Contact us for guidance.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question bg-gray-200 p-4 rounded-lg font-bold text-blue-700 cursor-pointer hover:bg-gray-300 transition" onclick="toggleFAQ(this)">What are the benefits of becoming an LIC agent?</div>
+          <div class="faq-answer p-4 bg-gray-50 border-l-4 border-blue-500 rounded-lg text-gray-600">
+            Benefits include:
+            <ul class="list-disc ml-6">
+              <li>Commission + Bonuses</li>
+              <li>Renewal commission up to 15 years</li>
+              <li>Car & House loans at attractive rates</li>
+              <li>Monthly stipends for women under BIM Sakhi</li>
+              <li>Hereditary commission</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-gray-300 py-10">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h3 class="text-xl font-bold text-white mb-4">Contact Details</h3>
+      <p class="mb-2">📍 Vanasthalipuram, Hyderabad</p>
+      <p class="mb-2">📞 +91 7036557621</p>
+      <p class="mb-4">✉️ rama.rao@example.com</p>
+      <p class="text-gray-400 text-sm">© 2025 D. Rama Rao. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Icon -->
+  <a href="https://wa.me/+917036557621" target="_blank"
+     class="fixed bottom-6 right-6 bg-[#25D366] text-white p-4 rounded-full shadow-lg hover:bg-[#20b858] transition z-50">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.134.298-.347.446-.52.149-.174.297-.298.473-.297.174 0 .348.074.474.198.126.124 1.473.648 1.473.986 0 .338-.231.645-.5.986-.273.346-.506.833-.644 1.131-.138.297.055.648.255.846.197.198.859.986 1.955 1.382 1.405.496 1.755.446 2.077.297.322-.149 1.005-.545 1.147-.842.142-.297.142-.596.099-.745-.045-.149-.198-.297-.496-.446z"/>
+      <path d="M12 0C5.373 0 0 5.373 0 12c0 2.117.548 4.115 1.508 5.853L0 24l6.277-1.595A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818c-1.92 0-3.718-.558-5.245-1.518l-.365-.232-3.723.947.956-3.677-.243-.387C2.43 15.31 2 13.695 2 12c0-5.514 4.486-10 10-10s10 4.486 10 10-4.486 10-10 10z"/>
+    </svg>
+  </a>
+
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    const navLinks = navMenu.querySelectorAll('a');
+
+    // Toggle menu
+    menuToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('hidden');
+      menuToggle.textContent = navMenu.classList.contains('hidden') ? '☰' : '×';
+    });
+
+    // Close menu when a link is clicked (mobile only)
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth < 768) {
+          navMenu.classList.add('hidden');
+          menuToggle.textContent = '☰';
+        }
+      });
+    });
+
+    function toggleFAQ(element) {
+      const answer = element.nextElementSibling;
+      const allAnswers = document.querySelectorAll('.faq-answer');
+      allAnswers.forEach(ans => { if (ans !== answer) ans.classList.remove('active'); });
+      answer.classList.toggle('active');
+    }
+  </script>
+</body>
+</html>
